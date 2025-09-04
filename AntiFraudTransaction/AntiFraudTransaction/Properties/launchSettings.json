@@ -25,7 +25,8 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ConnectionString": "Server=DESKTOP-N9I1T6G\\SQLEXPRESS;Database=AntiFraudTransaction;Trusted_Connection=True;TrustServerCertificate=True;"
       }
     },
     "Container (Dockerfile)": {

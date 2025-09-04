@@ -41,7 +41,7 @@ namespace Manager
             try
             {
                 var @event = new OperationEvent(operation.Id, operation.OperationDate);
-                await _producer.SendAsync(_kafkaSettings.Value.Topic, @event);
+                //await _producer.SendAsync(_kafkaSettings.Value.Topic, @event);
             }
             catch (Exception ex)
             {

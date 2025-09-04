@@ -20,6 +20,7 @@ namespace Manager
 
         public async Task<TransactionalOperation> CreateTransactionalOperation(TransactionalOperation operation)
         {
+            operation.Id = Guid.NewGuid();
             await _tansactionalOperationRepository.CreateTransactionalOperation(operation);
 
             var status = await _antiFraudGateway.ValidTransaction(operation);
