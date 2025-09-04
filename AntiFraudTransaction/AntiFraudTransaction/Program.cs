@@ -1,10 +1,12 @@
 using AntiFraudTransaction.Mapper;
+using Confluent.Kafka;
 using DB;
 using Infrastructure.Gateway;
 using Interfaces.Infrastucture;
 using Interfaces.Manager;
 using Interfaces.Repositories;
 using Manager;
+using Manager.Consumers;
 using Microsoft.Data.SqlClient;
 using System.Data;
 
@@ -14,6 +16,11 @@ builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
 
 builder.Services.AddScoped<IDbConnection>(sp =>
     new SqlConnection(builder.Configuration["ConnectionString"])
+);
+
+builder.Services.AddScoped<IEventConsumer, EventConsumer>();
+builder.Services.Configure<ConsumerConfig>(
+  builder.Configuration.GetSection(nameof(ConsumerConfig))
 );
 
 builder.Services.AddHttpClient<IAntiFraudGateway>();
