@@ -31,7 +31,7 @@ namespace Manager
         {
             operation.OperationDate = DateTime.UtcNow;
             operation.Id = Guid.NewGuid();
-            if (!await _operationValidator.IsValid(operation, ActionType.Create))
+            if (!await _operationValidator.IsValidAsync(operation, ActionType.Create))
             {
                 throw new Exception(String.Join(",", _operationValidator.Errors));
             }

@@ -4,7 +4,7 @@ namespace Interfaces.Validators
 {
     public interface ICustomValidator<T>
     {
-        Task<bool> IsValid(T t, ActionType actionType);
+        Task<bool> IsValidAsync(T t, ActionType actionType);
         List<string> Errors { get; }
     }
 }

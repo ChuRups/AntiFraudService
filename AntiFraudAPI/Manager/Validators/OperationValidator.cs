@@ -20,7 +20,7 @@ namespace Manager.Validators
             Validations();
         }
 
-        public async Task<bool> IsValid(Operation operation, ActionType actionType)
+        public async Task<bool> IsValidAsync(Operation operation, ActionType actionType)
         {
             _actionType = actionType;
 
