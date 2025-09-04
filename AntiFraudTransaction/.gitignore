@@ -1,0 +1,29 @@
+# Directorios de compilación y temporales
+**/bin/
+**/obj/
+**/Debug/
+**/Release/
+
+# Archivos de configuración y perfiles de usuario
+*.user
+*.suo
+*.userossc
+*.vs/
+*.vscode/
+*.vsconfig
+appsettings.Development.json
+
+# Archivos de la IDE y del sistema operativo
+Thumbs.db
+desktop.ini
+
+# Archivos de la solución y proyecto
+*.sln.iml
+*.csproj.user
+
+# Archivos específicos de Azure
+.azurite/
+
+# Otros
+*.tmp
+*.bak

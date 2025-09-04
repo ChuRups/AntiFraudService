@@ -1,0 +1,6 @@
+@AntiFraudAPI_HostAddress = http://localhost:44360
+
+GET {{AntiFraudTransaction_HostAddress}}/api/operations/
+Accept: application/json
+
+###
